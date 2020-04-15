@@ -1,0 +1,5 @@
+C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\bin\Debug\StartKitBLL.dll
+C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\bin\Debug\StartKitBLL.pdb
+C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.dll
+C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.pdb
+C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.csprojAssemblyReference.cache
