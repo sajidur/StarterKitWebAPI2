@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartKitBLL", "StartKitBLL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterKITDAL", "StarterKITDAL\StarterKITDAL.csproj", "{8BE0434D-146D-4B13-B7AE-E8B5D7642C22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarterApiConsumer", "StarterApiConsumer\StarterApiConsumer.csproj", "{AAE4F3B8-7E49-4E9E-9523-47D42121E0DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8BE0434D-146D-4B13-B7AE-E8B5D7642C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE0434D-146D-4B13-B7AE-E8B5D7642C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE0434D-146D-4B13-B7AE-E8B5D7642C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE4F3B8-7E49-4E9E-9523-47D42121E0DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE4F3B8-7E49-4E9E-9523-47D42121E0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE4F3B8-7E49-4E9E-9523-47D42121E0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE4F3B8-7E49-4E9E-9523-47D42121E0DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

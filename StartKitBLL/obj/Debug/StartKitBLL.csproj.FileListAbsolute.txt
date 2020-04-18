@@ -3,3 +3,8 @@ C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\bin\Debug\StartKitBLL.pdb
 C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.dll
 C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.pdb
 C:\Users\p\source\repos\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.csprojAssemblyReference.cache
+E:\My Work\WebAPIStartupKit\StartKitBLL\bin\Debug\StartKitBLL.dll
+E:\My Work\WebAPIStartupKit\StartKitBLL\bin\Debug\StartKitBLL.pdb
+E:\My Work\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.csprojAssemblyReference.cache
+E:\My Work\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.dll
+E:\My Work\WebAPIStartupKit\StartKitBLL\obj\Debug\StartKitBLL.pdb

@@ -9,3 +9,14 @@ C:\Users\p\source\repos\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.c
 C:\Users\p\source\repos\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CopyComplete
 C:\Users\p\source\repos\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.dll
 C:\Users\p\source\repos\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\StarterKITDAL.dll.config
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\StarterKITDAL.dll
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\StarterKITDAL.pdb
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\EntityFramework.dll
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\EntityFramework.xml
+E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csprojAssemblyReference.cache
+E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CopyComplete
+E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.dll
+E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
