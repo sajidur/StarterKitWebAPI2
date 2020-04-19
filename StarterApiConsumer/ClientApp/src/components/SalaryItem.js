@@ -1,39 +1,50 @@
 ﻿import React, { Component } from 'react';
+import axios from 'axios';
+
 export class SalaryItem extends Component {
     static displayName = SalaryItem.name;
-
+    state = {
+        benifitName: '',
+        benifitAmount:''
+    }
     constructor(props) {
         super(props);
-        this.state = { currentCount: 0 };
-        this.incrementCounter = this.incrementCounter.bind(this);
+        this.state = { benifitName: 'test', benifitAmount: 100 };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-
-    incrementCounter() {
-        this.setState({
-            currentCount: this.state.currentCount + 1
-        });
+    handleChange = (event) => {
+        this.setState({ [event.target.name]: event.target.value });
+    }
+    handleSubmit(event) {
+        event.preventDefault();
+        var request = { ItemName: this.state.benifitName, Amount: this.state.benifitAmount };
+        axios.post('https://localhost:44334/api/SalaryItem', request)
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            });
     }
 
     render() {
         return (
             <div>
                 <h3>Salary Item Add</h3>
-                <div class='row'>
-                    <div class='col-md-6'>
+                <div className='row'>
+                    <div className='col-md-6'>
                         <h3>Add Rules</h3>
-                        <form>
-                            <input name="benifitName" type="text" required />
-                            <input name="benifitAmount" type="number" required />
+                        <form onSubmit={this.handleSubmit}>
+                            <input name="benifitName" value={this.state.value} type="text" required onChange={this.handleChange} />
+                            <input name="benifitAmount" value= {this.state.value} type="number" required onChange={this.handleChange} />
+                            <input type="submit" value="Submit" />
                         </form>
                     </div>
-                    <div class='col-md-6'>
+                    <div className='col-md-6'>
                         <h3>Conditions</h3>
 
                     </div>
                     </div>
-                <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
 
-                <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
             </div>
         );
     }

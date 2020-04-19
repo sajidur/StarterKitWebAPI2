@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StartKitBLL
+namespace StarterKITDAL.Repository
 {
-    public class Class1
+    public interface ISalaryItemRepository
     {
+        ICollection<SalaryItem> GetAll(int CompanyId);
     }
 }

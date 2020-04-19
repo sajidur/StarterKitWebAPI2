@@ -9,7 +9,8 @@ namespace StarterKITDAL
 {
     public class ApplicationDbContext : DbContext
     {
-        protected ApplicationDbContext():base("name=AppConnectionString")
+
+        public ApplicationDbContext():base("name=AppConnectionString")
         {
             Database.SetInitializer<ApplicationDbContext>(new CreateDatabaseIfNotExists<ApplicationDbContext>());
 
@@ -21,6 +22,11 @@ namespace StarterKITDAL
         }
         //entities
         public DbSet<User> Users { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<SalaryItem> SalaryItems { get; set; }
+        public DbSet<Rules> Rules { get; set; }
+        public DbSet<Conditions> Conditions { get; set; }
+
     }
     public class SeedInitialize : CreateDatabaseIfNotExists<ApplicationDbContext>
     {

@@ -53,14 +53,30 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Company.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Conditions.cs" />
+    <Compile Include="Migrations\202004190752253_initial.cs" />
+    <Compile Include="Migrations\202004190752253_initial.designer.cs">
+      <DependentUpon>202004190752253_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repository\IConditionRepository.cs" />
+    <Compile Include="Repository\IRulesRepository.cs" />
+    <Compile Include="Repository\ISalaryItemRepository.cs" />
+    <Compile Include="Repository\SalaryItemRepository.cs" />
+    <Compile Include="Rules.cs" />
+    <Compile Include="SalaryItem.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004190752253_initial.resx">
+      <DependentUpon>202004190752253_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
