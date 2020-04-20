@@ -205,3 +205,4 @@ E:\My Work\WebAPIStartupKit\WebAPIStartupKit\bin\AutoMapper.xml
 E:\My Work\WebAPIStartupKit\WebAPIStartupKit\bin\AutoMapper.Contrib.Autofac.DependencyInjection.pdb
 E:\My Work\WebAPIStartupKit\WebAPIStartupKit\bin\Microsoft.Bcl.AsyncInterfaces.xml
 E:\My Work\WebAPIStartupKit\WebAPIStartupKit\bin\System.Threading.Tasks.Extensions.xml
+E:\My Work\WebAPIStartupKit\WebAPIStartupKit\bin\AutoMapper.Unity.dll

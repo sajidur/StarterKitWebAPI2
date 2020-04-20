@@ -43,6 +43,7 @@ namespace WebAPIStartupKit
         public IDependencyScope BeginScope()
         {
             var child = _container.CreateChildContainer();
+
             return new UnityResolver(child);
         }
 

@@ -1,4 +1,6 @@
-﻿using StartKitBLL.Response;
+﻿using StarterKITDAL;
+using StartKitBLL.Request;
+using StartKitBLL.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +12,6 @@ namespace StartKitBLL
     public interface ISalaryItemService
     {
         List<SalaryItemResponse> GetAll(int CountryId);
+        int Save(SalaryItemRequest salaryItem);
     }
 }

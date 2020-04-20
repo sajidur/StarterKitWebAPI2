@@ -72,7 +72,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRulesService.cs" />
     <Compile Include="ISalaryItemService.cs" />
+    <Compile Include="Request\RulesRequest.cs" />
+    <Compile Include="Request\SalaryItemRequest.cs" />
+    <Compile Include="RulesService.cs" />
     <Compile Include="SalaryItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\SalaryItemResponse.cs" />

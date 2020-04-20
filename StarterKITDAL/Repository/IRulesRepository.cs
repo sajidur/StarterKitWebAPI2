@@ -8,6 +8,7 @@ namespace StarterKITDAL.Repository
 {
     public interface IRulesRepository
     {
-        List<Rules> GetAll(int CompanyId);
+        ICollection<Rules> GetAll(int CompanyId);
+        int Save(Rules rules);
     }
 }

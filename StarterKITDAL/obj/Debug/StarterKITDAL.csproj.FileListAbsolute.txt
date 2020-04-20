@@ -19,6 +19,6 @@ E:\My Work\WebAPIStartupKit\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.xm
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CopyComplete
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.dll
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
-E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initial.resources
+E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initiate.resources
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.GenerateResource.cache
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csprojAssemblyReference.cache

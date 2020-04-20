@@ -17,8 +17,7 @@ namespace StarterKITDAL
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //Configure domain classes using modelBuilder here..
-
+            modelBuilder.Entity<Rules>().HasRequired(a => a.SalaryItem).WithMany().HasForeignKey(a=>a.SalaryItemId);
         }
         //entities
         public DbSet<User> Users { get; set; }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 using StarterKITDAL;
 using StartKitBLL.Response;
 using System;
@@ -10,18 +11,17 @@ namespace WebAPIStartupKit
 {
     public class UserProfile:Profile
     {
-        public UserProfile()
+        public static IMapper Mapper { get; set; }
+        public static void RegisterProfiles()
         {
-            CreateMap<SalaryItem, SalaryItemResponse>().ReverseMap();
             var config = new MapperConfiguration(cfg =>
             {
                 //Create all maps here
-                cfg.CreateMap<SalaryItem, SalaryItemResponse>().ReverseMap();
                 //...
             });
-
-            IMapper mapper = config.CreateMapper();
+            config.AssertConfigurationIsValid();
+            Mapper = config.CreateMapper();
         }
-
+   
     }
 }

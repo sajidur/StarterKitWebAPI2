@@ -8,6 +8,7 @@ namespace StarterKITDAL.Repository
 {
     public interface ISalaryItemRepository
     {
+        int Save(SalaryItem salaryItem);
         ICollection<SalaryItem> GetAll(int CompanyId);
     }
 }

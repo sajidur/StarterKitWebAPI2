@@ -1,4 +1,5 @@
 ﻿using StartKitBLL;
+using StartKitBLL.Request;
 using StartKitBLL.Response;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
-using WebAPIStartupKit.RequestBody;
 
 namespace WebAPIStartupKit.Controllers
 {
@@ -18,9 +18,10 @@ namespace WebAPIStartupKit.Controllers
         {
             _salaryItemService = salaryItemService;
         }
-        public bool Post( SalaryItemRequest request)
+        public bool Post(SalaryItemRequest request)
         {
-            var data = Request;
+            request.CountryId = 1;
+            _salaryItemService.Save(request);
             return true;
         }
         public List<SalaryItemResponse> GetAll()

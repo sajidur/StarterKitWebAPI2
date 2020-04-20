@@ -8,6 +8,6 @@ namespace StarterKITDAL.Repository
 {
     public interface IConditionRepository
     {
-        List<Conditions> GetAll(int RulesId);
+        ICollection<Conditions> GetAll(int RulesId);
     }
 }

@@ -55,14 +55,16 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Conditions.cs" />
-    <Compile Include="Migrations\202004190752253_initial.cs" />
-    <Compile Include="Migrations\202004190752253_initial.designer.cs">
-      <DependentUpon>202004190752253_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202004200814042_initiate.cs" />
+    <Compile Include="Migrations\202004200814042_initiate.designer.cs">
+      <DependentUpon>202004200814042_initiate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repository\ConditionRepository.cs" />
     <Compile Include="Repository\IConditionRepository.cs" />
     <Compile Include="Repository\IRulesRepository.cs" />
     <Compile Include="Repository\ISalaryItemRepository.cs" />
+    <Compile Include="Repository\RulesRepository.cs" />
     <Compile Include="Repository\SalaryItemRepository.cs" />
     <Compile Include="Rules.cs" />
     <Compile Include="SalaryItem.cs" />
@@ -74,8 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004190752253_initial.resx">
-      <DependentUpon>202004190752253_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004200814042_initiate.resx">
+      <DependentUpon>202004200814042_initiate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

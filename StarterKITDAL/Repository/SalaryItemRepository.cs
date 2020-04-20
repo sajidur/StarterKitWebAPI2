@@ -15,7 +15,14 @@ namespace StarterKITDAL.Repository
         }
         public ICollection<SalaryItem> GetAll(int countryId)
         {
-            return _context.SalaryItems.Where(a => a.CountryId == countryId).ToList();
+            return _context.SalaryItems.Where(a => a.Country.Id == countryId).ToList();
+        }
+
+        public int Save(SalaryItem salaryItem)
+        {
+            salaryItem.Country = null;
+            _context.SalaryItems.Add(salaryItem);
+           return _context.SaveChanges();
         }
     }
 }
