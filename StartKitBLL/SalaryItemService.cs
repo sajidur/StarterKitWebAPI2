@@ -5,6 +5,7 @@ using StartKitBLL.Request;
 using StartKitBLL.Response;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,27 @@ namespace StartKitBLL
                 result.Add(new SalaryItemResponse() { CountryId = item.Country.Id, Descriptions = item.Descriptions, Id = item.Id, Name = item.Name });
             }
             return result;
+        }
+        public dynamic SalarySheet(int CountryId)
+        {
+            var salaryItems = _salaryItemRepository.GetAll(CountryId).ToList();
+            dynamic expando = new ExpandoObject();
+
+            foreach (var item in salaryItems)
+            {
+                AddProperty(expando, item.Name, "0");
+
+            }
+            return expando;
+        }
+        public static void AddProperty(ExpandoObject expando, string propertyName, object propertyValue)
+        {
+            // ExpandoObject supports IDictionary so we can extend it like this
+            var expandoDict = expando as IDictionary<string, object>;
+            if (expandoDict.ContainsKey(propertyName))
+                expandoDict[propertyName] = propertyValue;
+            else
+                expandoDict.Add(propertyName, propertyValue);
         }
 
         public int Save(SalaryItemRequest salaryItemReq)

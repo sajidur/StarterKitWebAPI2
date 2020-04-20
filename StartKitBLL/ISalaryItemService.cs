@@ -13,5 +13,6 @@ namespace StartKitBLL
     {
         List<SalaryItemResponse> GetAll(int CountryId);
         int Save(SalaryItemRequest salaryItem);
+        dynamic SalarySheet(int CountryId);
     }
 }

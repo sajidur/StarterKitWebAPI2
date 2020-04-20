@@ -20,8 +20,16 @@ namespace WebAPIStartupKit.Controllers
         }
         public bool Post(RulesRequest request)
         {
-            _rulesService.Save(request);
-            return true;
+            try
+            {
+                _rulesService.Save(request);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
         public List<Rules> GetAll()
         {

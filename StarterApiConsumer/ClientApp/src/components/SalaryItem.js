@@ -5,11 +5,11 @@ export class SalaryItem extends Component {
     static displayName = SalaryItem.name;
     state = {
         benifitName: '',
-        benifitAmount:''
+        Descriptions:''
     }
     constructor(props) {
         super(props);
-        this.state = { benifitName: 'test', benifitAmount: 100 };
+        this.state = { benifitName: '', Descriptions: '' };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -18,33 +18,26 @@ export class SalaryItem extends Component {
     }
     handleSubmit(event) {
         event.preventDefault();
-        var request = { ItemName: this.state.benifitName, Amount: this.state.benifitAmount };
+        var request = { Name: this.state.benifitName, Descriptions: this.state.Descriptions };
         axios.post('https://localhost:44334/api/SalaryItem', request)
             .then(res => {
-                console.log(res);
-                console.log(res.data);
+                alert('Data saved');
             });
     }
 
     render() {
         return (
             <div>
-                <h3>Salary Item Add</h3>
+                <h4>Salary Item/Benifit Add</h4>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <h3>Add Rules</h3>
                         <form onSubmit={this.handleSubmit}>
-                            <input name="benifitName" value={this.state.value} type="text" required onChange={this.handleChange} />
-                            <input name="benifitAmount" value= {this.state.value} type="number" required onChange={this.handleChange} />
+                            <input name="benifitName" value={this.state.value} type="text" placeholder="like Basic Salary" required onChange={this.handleChange} />
+                            <input name="Descriptions" value={this.state.value} type="text" placeholder="Descriptions" onChange={this.handleChange} />
                             <input type="submit" value="Submit" />
                         </form>
+                    </div>                    
                     </div>
-                    <div className='col-md-6'>
-                        <h3>Conditions</h3>
-
-                    </div>
-                    </div>
-
             </div>
         );
     }

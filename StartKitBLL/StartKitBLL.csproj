@@ -76,6 +76,7 @@
     <Compile Include="ISalaryItemService.cs" />
     <Compile Include="Request\RulesRequest.cs" />
     <Compile Include="Request\SalaryItemRequest.cs" />
+    <Compile Include="Response\SalarySheetResponse.cs" />
     <Compile Include="RulesService.cs" />
     <Compile Include="SalaryItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
