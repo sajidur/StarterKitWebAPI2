@@ -58,12 +58,16 @@
     <Compile Include="Migrations\202210251622068_initial_details.designer.cs">
       <DependentUpon>202210251622068_initial_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210261640311_product.cs" />
+    <Compile Include="Migrations\202210261640311_product.designer.cs">
+      <DependentUpon>202210261640311_product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductImage.cs" />
-    <Compile Include="Repository\SliderImageRepository.cs" />
-    <Compile Include="Repository\ISliderImageRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\INewsContentRepository.cs" />
     <Compile Include="Repository\IContactRepository.cs" />
     <Compile Include="Repository\NewsContentRepository.cs" />
@@ -79,6 +83,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202210251622068_initial_details.resx">
       <DependentUpon>202210251622068_initial_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210261640311_product.resx">
+      <DependentUpon>202210261640311_product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

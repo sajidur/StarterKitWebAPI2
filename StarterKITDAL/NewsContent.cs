@@ -13,5 +13,7 @@ namespace StarterKITDAL
         public string ImageUrl { get; set; }
         public string MainText { get; set; }
         public string DetailText { get; set; }
+        public int Order { get; set; }
+
     }
 }

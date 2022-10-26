@@ -36,3 +36,4 @@ C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.AssemblyReference.cache
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initial_details.resources
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.GenerateResource.cache
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.product.resources

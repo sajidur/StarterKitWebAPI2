@@ -92,14 +92,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Emailer.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="INewsContentService.cs" />
-    <Compile Include="ISliderImageService.cs" />
+    <Compile Include="IProductService.cs" />
     <Compile Include="Request\SliderImageRequest.cs" />
     <Compile Include="Response\SalarySheetResponse.cs" />
     <Compile Include="NewsContentService.cs" />
-    <Compile Include="SliderImageService.cs" />
+    <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Response\SalaryItemResponse.cs" />
+    <Compile Include="Response\ProductResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StarterKITDAL\StarterKITDAL.csproj">

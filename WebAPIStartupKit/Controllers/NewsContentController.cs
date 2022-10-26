@@ -24,9 +24,9 @@ namespace WebAPIStartupKit.Controllers
             _newsContent.Save(request);
             return true;
         }
-        public List<NewsContent> GetAll(string type)
+        public List<NewsContent> GetAll()
         {
-           return _newsContent.GetList(type);
+           return _newsContent.GetList("");
         }
     }
 }

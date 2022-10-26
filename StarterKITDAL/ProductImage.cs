@@ -9,7 +9,7 @@ namespace StarterKITDAL
     public class ProductImage:BaseEntity
     {
         public bool IsDefault { get; set; }
-        public bool ProductId { get; set; }
+        public int ProductId { get; set; }
         public int ImageUrl { get; set; }
         public string ImageText { get; set; }
     }

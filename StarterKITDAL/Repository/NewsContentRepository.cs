@@ -22,7 +22,7 @@ namespace StarterKITDAL.Repository
 
         ICollection<NewsContent> INewsContentRepository.GetAll(string type)
         {
-           return _context.NewsContents.Where(a => a.Type == type).ToList();
+           return _context.NewsContents.ToList();
         }
     }
 }
