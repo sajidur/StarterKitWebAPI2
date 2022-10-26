@@ -18,7 +18,7 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-            context.Countries.Add(new Country() {Name="Bangladesh"});
+            context.Users.Add(new User() {UserName="admin",Password="admin1234",IsActive=true});
         }
     }
 }

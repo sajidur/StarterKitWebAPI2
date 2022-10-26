@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace StartKitBLL.Request
 {
-   public  class SalaryItemRequest
+   public  class SliderImageRequest
     {
         public string Name { get; set; }
         public string Descriptions { get; set; }
-        public virtual int CountryId { get; set; }
     }
 }

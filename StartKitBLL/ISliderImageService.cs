@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace StartKitBLL
 {
-    public interface ISalaryItemService
+    public interface ISliderImageService
     {
-        List<SalaryItemResponse> GetAll(int CountryId);
-        int Save(SalaryItemRequest salaryItem);
-        dynamic SalarySheet(int CountryId);
+        List<SliderImage> GetAll(string type);
+        int Save(SliderImage sliderImage);
     }
 }

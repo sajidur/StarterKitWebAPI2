@@ -18,12 +18,13 @@ namespace WebAPIStartupKit
             // it is NOT necessary to register your controllers
             
             // e.g. container.RegisterType<ITestService, TestService>();
-            container.RegisterType<ISalaryItemService, SalaryItemService>();
-            container.RegisterType<ISalaryItemRepository, SalaryItemRepository>();
-            container.RegisterType<IRulesRepository, RulesRepository>();
-            container.RegisterType<IRulesService, RulesService>(); 
+            container.RegisterType<ISliderImageService, SliderImageService>();
+            container.RegisterType<IEmailer,Emailer>();
+            container.RegisterType<IContactRepository, ContactRepository>();
+            container.RegisterType<INewsContentRepository, NewsContentRepository>();
+            container.RegisterType<INewsContentService, NewsContentService>(); 
           //  container.RegisterType<ISalaryItemService, SalaryItemService>();
-            container.RegisterType<IConditionRepository, ConditionRepository>();
+            container.RegisterType<ISliderImageRepository, SliderImageRepository>();
             container.RegisterType<ApplicationDbContext, ApplicationDbContext>();
             container.RegisterInstance<IMapper>(UserProfile.Mapper);
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);

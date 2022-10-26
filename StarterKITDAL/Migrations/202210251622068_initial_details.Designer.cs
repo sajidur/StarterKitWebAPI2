@@ -7,13 +7,13 @@ namespace StarterKITDAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class initiate : IMigrationMetadata
+    public sealed partial class initial_details : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initiate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial_details));
         
         string IMigrationMetadata.Id
         {
-            get { return "202004200814042_initiate"; }
+            get { return "202210251622068_initial_details"; }
         }
         
         string IMigrationMetadata.Source

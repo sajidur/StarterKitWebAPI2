@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StarterKITDAL.Repository
 {
-    public interface ISalaryItemRepository
+    public interface ISliderImageRepository
     {
-        int Save(SalaryItem salaryItem);
-        ICollection<SalaryItem> GetAll(int CompanyId);
+        ICollection<SliderImage> GetAll(string position);
+        int Save(SliderImage sliderImage);
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StarterKITDAL.Repository
 {
-    public interface IRulesRepository
+    public interface IContactRepository
     {
-        ICollection<Rules> GetAll(int CompanyId);
-        int Save(Rules rules);
+        int Save(Contact contact);
+        ICollection<Contact> GetAll(int isResponse);
     }
 }

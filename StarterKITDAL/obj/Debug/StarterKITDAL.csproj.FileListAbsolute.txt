@@ -22,3 +22,17 @@ E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initiate.resources
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.GenerateResource.cache
 E:\My Work\WebAPIStartupKit\StarterKITDAL\obj\Debug\StarterKITDAL.csprojAssemblyReference.cache
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.dll.config
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.dll
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.pdb
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.dll
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.xml
+C:\My data\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CoreCompileInputs.cache
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CopyComplete
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.dll
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.pdb
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.AssemblyReference.cache
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initial_details.resources
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.GenerateResource.cache

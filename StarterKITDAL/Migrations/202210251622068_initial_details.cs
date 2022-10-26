@@ -3,77 +3,94 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initiate : DbMigration
+    public partial class initial_details : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Conditions",
+                "dbo.Contacts",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        IFCondition = c.String(),
-                        ISConditions = c.String(),
-                        ISValueConditions = c.String(),
-                        Amount = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        RulesId = c.Int(nullable: false),
+                        Name = c.String(),
+                        Email = c.String(),
+                        Subject = c.String(),
+                        Message = c.String(),
+                        IsResponse = c.Int(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.Int(nullable: false),
                         UpdatedBy = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Rules", t => t.RulesId, cascadeDelete: true)
-                .Index(t => t.RulesId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Rules",
+                "dbo.NewsContents",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        IsFixedFigure = c.Boolean(nullable: false),
-                        IsRelatedTo = c.Boolean(nullable: false),
-                        RelatedToItemId = c.Int(nullable: false),
-                        RelatedPercentage = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Amount = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        DeductionAmount = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        AdditionAmount = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        SalaryItemId = c.Int(nullable: false),
+                        Type = c.String(),
+                        Headline = c.String(),
+                        ImageUrl = c.String(),
+                        MainText = c.String(),
+                        DetailText = c.String(),
                         IsActive = c.Boolean(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.Int(nullable: false),
                         UpdatedBy = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.SalaryItems", t => t.SalaryItemId, cascadeDelete: true)
-                .Index(t => t.SalaryItemId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.SalaryItems",
+                "dbo.ProductImages",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
-                        Descriptions = c.String(),
-                        CountryId = c.Int(nullable: false),
+                        IsDefault = c.Boolean(nullable: false),
+                        ProductId = c.Boolean(nullable: false),
+                        ImageUrl = c.Int(nullable: false),
+                        ImageText = c.String(),
                         IsActive = c.Boolean(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.Int(nullable: false),
                         UpdatedBy = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Countries", t => t.CountryId, cascadeDelete: true)
-                .Index(t => t.CountryId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Countries",
+                "dbo.Products",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false),
+                        CategoryId = c.Int(nullable: false),
+                        Name = c.String(),
+                        TitleText = c.String(),
+                        InStockText = c.String(),
+                        ShortText = c.String(),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        DetailText = c.String(),
+                        IsActive = c.Boolean(nullable: false),
+                        CreateDate = c.DateTime(nullable: false),
+                        UpdatedDate = c.DateTime(nullable: false),
+                        CreatedBy = c.Int(nullable: false),
+                        UpdatedBy = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.SliderImages",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        ImageUrl = c.String(),
+                        SliderPosition = c.String(),
+                        SliderMainText = c.String(),
+                        SliderDetailText = c.String(),
+                        SliderOrder = c.Int(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         CreateDate = c.DateTime(nullable: false),
                         UpdatedDate = c.DateTime(nullable: false),
@@ -95,29 +112,19 @@
                         UpdatedDate = c.DateTime(nullable: false),
                         CreatedBy = c.Int(nullable: false),
                         UpdatedBy = c.Int(nullable: false),
-                        Country_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Countries", t => t.Country_Id)
-                .Index(t => t.Country_Id);
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Users", "Country_Id", "dbo.Countries");
-            DropForeignKey("dbo.Rules", "SalaryItemId", "dbo.SalaryItems");
-            DropForeignKey("dbo.SalaryItems", "CountryId", "dbo.Countries");
-            DropForeignKey("dbo.Conditions", "RulesId", "dbo.Rules");
-            DropIndex("dbo.Users", new[] { "Country_Id" });
-            DropIndex("dbo.SalaryItems", new[] { "CountryId" });
-            DropIndex("dbo.Rules", new[] { "SalaryItemId" });
-            DropIndex("dbo.Conditions", new[] { "RulesId" });
             DropTable("dbo.Users");
-            DropTable("dbo.Countries");
-            DropTable("dbo.SalaryItems");
-            DropTable("dbo.Rules");
-            DropTable("dbo.Conditions");
+            DropTable("dbo.SliderImages");
+            DropTable("dbo.Products");
+            DropTable("dbo.ProductImages");
+            DropTable("dbo.NewsContents");
+            DropTable("dbo.Contacts");
         }
     }
 }

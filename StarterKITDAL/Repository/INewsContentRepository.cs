@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace StarterKITDAL.Repository
 {
-    public interface IConditionRepository
+    public interface INewsContentRepository
     {
-        ICollection<Conditions> GetAll(int RulesId);
+        ICollection<NewsContent> GetAll(string type);
+        int Save(NewsContent rules);
     }
 }

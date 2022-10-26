@@ -53,21 +53,22 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Country.cs" />
-    <Compile Include="Conditions.cs" />
-    <Compile Include="Migrations\202004200814042_initiate.cs" />
-    <Compile Include="Migrations\202004200814042_initiate.designer.cs">
-      <DependentUpon>202004200814042_initiate.cs</DependentUpon>
+    <Compile Include="Contact.cs" />
+    <Compile Include="Migrations\202210251622068_initial_details.cs" />
+    <Compile Include="Migrations\202210251622068_initial_details.designer.cs">
+      <DependentUpon>202210251622068_initial_details.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Repository\ConditionRepository.cs" />
-    <Compile Include="Repository\IConditionRepository.cs" />
-    <Compile Include="Repository\IRulesRepository.cs" />
-    <Compile Include="Repository\ISalaryItemRepository.cs" />
-    <Compile Include="Repository\RulesRepository.cs" />
-    <Compile Include="Repository\SalaryItemRepository.cs" />
-    <Compile Include="Rules.cs" />
-    <Compile Include="SalaryItem.cs" />
+    <Compile Include="NewsContent.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductImage.cs" />
+    <Compile Include="Repository\SliderImageRepository.cs" />
+    <Compile Include="Repository\ISliderImageRepository.cs" />
+    <Compile Include="Repository\INewsContentRepository.cs" />
+    <Compile Include="Repository\IContactRepository.cs" />
+    <Compile Include="Repository\NewsContentRepository.cs" />
+    <Compile Include="Repository\ContactRepository.cs" />
+    <Compile Include="SliderImage.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,8 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004200814042_initiate.resx">
-      <DependentUpon>202004200814042_initiate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210251622068_initial_details.resx">
+      <DependentUpon>202210251622068_initial_details.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
