@@ -10,6 +10,10 @@ namespace WebAPIStartupKit.Controllers
     public class SliderImageController : ApiController
     {
         private readonly ISliderImageService _sliderImage;
+        public SliderImageController(ISliderImageService sliderImage)
+        {
+            _sliderImage= sliderImage;
+        }
 
         [HttpGet]
         public List<SliderImage> GetSliders(string SliderPosition)
@@ -18,25 +22,8 @@ namespace WebAPIStartupKit.Controllers
         }
         public bool Post(SliderImage request)
         {
-            var httpRequest = HttpContext.Current.Request;
-            if (httpRequest.Files.Count > 0)
-            {
-                foreach (string file in httpRequest.Files)
-                {
-                    var postedFile = httpRequest.Files[file];
-                    var filePath = HttpContext.Current.Server.MapPath("~/" + postedFile.FileName);
-                    postedFile.SaveAs(filePath);
-                    request.ImageUrl = filePath;
-                    _sliderImage.Save(request);
-                    return true;
-                }
-                return false;
-            }
-            else
-            {
-                return false;
-            }
-
+            var i=_sliderImage.Save(request);
+            return true;
 
         }
     }
