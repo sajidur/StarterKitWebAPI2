@@ -42,6 +42,31 @@ namespace WebAPIStartupKit.Controllers
             var i=_productService.Save(request);
             return i;
         }
+
+        [HttpPost]
+        [Route("ProductEdit")]
+        public bool ProductEdit(Product request)
+        {
+            var i = _productService.Save(request);
+            return true;
+        }
+
+        [HttpPost]
+        [Route("ProductDelete")]
+        public bool ProductDelete(ProductImage request)
+        {
+            var i = _productService.SaveProductImage(request);
+            return true;
+        }
+
+        [HttpPost]
+        [Route("ProductImageDelete")]
+        public bool ProductImageDelete(ProductImage request)
+        {
+            var i = _productService.SaveProductImage(request);
+            return true;
+        }
+
         [HttpPost]
         [Route("SaveProductImage")]
         public bool SaveProductImage(ProductImage request)
