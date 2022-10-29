@@ -12,21 +12,31 @@ namespace StartKitBLL
 {
     public class NewsContentService:INewsContentService
     {
-        private INewsContentRepository  _rulesRepository;
+        private INewsContentRepository  _newsContentRepository;
         private IMapper _mapper;
         public NewsContentService(INewsContentRepository rulesRepository, IMapper mapper)
         {
-            this._rulesRepository = rulesRepository;
+            this._newsContentRepository = rulesRepository;
             this._mapper = mapper;
         }
         public int Save(NewsContent newsContent)
         {
-           return  _rulesRepository.Save(newsContent);
+           return  _newsContentRepository.Save(newsContent);
 
         }
         public List<NewsContent> GetList(string type)
         {
-           return  _rulesRepository.GetAll(type).ToList();
+           return  _newsContentRepository.GetAll(type).ToList();
+        }
+
+        public NewsContent GetById(int id)
+        {
+            return _newsContentRepository.GetById(id);
+        }
+
+        public int Delete(int id)
+        {
+            return _newsContentRepository.Delete(id);
         }
     }
 }

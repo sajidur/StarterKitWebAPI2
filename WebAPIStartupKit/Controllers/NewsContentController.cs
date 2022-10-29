@@ -4,13 +4,11 @@ using StartKitBLL.Request;
 using StartKitBLL.Response;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace WebAPIStartupKit.Controllers
 {
+    [RoutePrefix("api/NewsContent")]
     public class NewsContentController : ApiController
     {
         // GET: SalaryItem
@@ -19,11 +17,22 @@ namespace WebAPIStartupKit.Controllers
         {
             _newsContent = newsContent;
         }
+
+        [HttpPost]
         public bool Post(NewsContent request)
         {
             _newsContent.Save(request);
             return true;
         }
+
+        [Route("Delete"), HttpPost]
+        public bool Delete(int id)
+        {
+            _newsContent.Delete(id);
+            return true;
+        }
+
+        [HttpGet]
         public List<NewsContent> GetAll()
         {
            return _newsContent.GetList("");

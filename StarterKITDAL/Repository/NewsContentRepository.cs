@@ -14,6 +14,19 @@ namespace StarterKITDAL.Repository
             _context = applicationDbContext;
         }
 
+        public int Delete(int id)
+        {
+            var data= _context.NewsContents.Where(a => a.Id == id).FirstOrDefault();
+            _context.NewsContents.Remove(data);
+            return _context.SaveChanges();
+        }
+
+        public NewsContent GetById(int id)
+        {
+            return _context.NewsContents.Where(a=>a.Id==id).FirstOrDefault();
+
+        }
+
         public int Save(NewsContent newsContent)
         {
             _context.NewsContents.Add(newsContent);

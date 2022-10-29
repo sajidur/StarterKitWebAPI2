@@ -32,7 +32,8 @@ namespace StarterKITDAL.Repository
         public int Save(Product sliderImage)
         {
             _context.Products.Add(sliderImage);
-            return _context.SaveChanges();
+            _context.SaveChanges();
+            return sliderImage.Id;   
         }
 
         public int SaveProductImage(ProductImage sliderImage)

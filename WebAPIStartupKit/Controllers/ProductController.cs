@@ -23,23 +23,27 @@ namespace WebAPIStartupKit.Controllers
         }
 
         [HttpGet]
+        [Route("GetTopList")]
         public List<ProductResponse> GetTopList(int categoryId)
         {
             return _productService.GetTopList(categoryId);
         }
-
+        
         [HttpGet]
+        [Route("GetByProductId")]
         public ProductResponse GetByProductId(int productId)
         {
             return _productService.GetByProduct(productId);
         }
         [HttpPost]
-        public bool Save(Product request)
+        [Route("Save")]
+        public int Save(Product request)
         {
             var i=_productService.Save(request);
-            return true;
+            return i;
         }
         [HttpPost]
+        [Route("SaveProductImage")]
         public bool SaveProductImage(ProductImage request)
         {
             var i = _productService.SaveProductImage(request);

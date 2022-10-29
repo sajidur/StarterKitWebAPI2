@@ -20,7 +20,7 @@ namespace WebAPIStartupKit.Controllers
                 foreach (string file in httpRequest.Files)
                 {
                     var postedFile = httpRequest.Files[file];
-                    var filePath = HttpContext.Current.Server.MapPath("~/" + newguid+postedFile.FileName.Trim());
+                    var filePath = HttpContext.Current.Server.MapPath("~/Upload/" + newguid+postedFile.FileName.Trim());
                     postedFile.SaveAs(filePath);
                     return newguid+postedFile.FileName;
                 }

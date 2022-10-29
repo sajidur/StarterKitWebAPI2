@@ -14,27 +14,27 @@ namespace StartKitBLL
 {
    public  class ProductService : IProductService
     {
-        private IProductRepository _sliderImageRepository;
+        private IProductRepository _productRepository;
         private IMapper _mapper;
         public ProductService(IProductRepository sliderImageRepository, IMapper mapper)
         {
-            this._sliderImageRepository = sliderImageRepository;
+            this._productRepository = sliderImageRepository;
             this._mapper = mapper;
         }
 
         public List<Product> GetAll(int categoryId)
         {
-            var salaryItems = _sliderImageRepository.GetAll(categoryId).ToList();
+            var salaryItems = _productRepository.GetAll(categoryId).ToList();
             return salaryItems;
         }
         public List<ProductResponse> GetTopList(int categoryId)
         {
             List<ProductResponse> list = new List<ProductResponse>();
-            var products = _sliderImageRepository.GetAll(categoryId).ToList();
+            var products = _productRepository.GetAll(categoryId).ToList();
             foreach (var product in products)
             {
                 var productResponse = _mapper.Map<ProductResponse>(product);
-                productResponse.Images = _sliderImageRepository.GetProductImages(product.Id).ToList();
+                productResponse.Images = _productRepository.GetProductImages(product.Id).ToList();
                 list.Add(productResponse);
             }
             return list;
@@ -42,11 +42,11 @@ namespace StartKitBLL
 
         public ProductResponse GetByProduct(int productId)
         {
-            var product = _sliderImageRepository.GetByProduct(productId);
+            var product = _productRepository.GetByProduct(productId);
             if (product!=null)
             {
                var productResponse= _mapper.Map<ProductResponse>(product);
-                productResponse.Images = _sliderImageRepository.GetProductImages(productId).ToList();
+                productResponse.Images = _productRepository.GetProductImages(productId).ToList();
                 return productResponse;
             }
             else
@@ -56,14 +56,14 @@ namespace StartKitBLL
 
         }
 
-        public bool Save(Product sliderImage)
+        public int Save(Product product)
         {
-            throw new NotImplementedException();
+            return _productRepository.Save(product);
         }
 
-        public bool SaveProductImage(ProductImage request)
+        public int SaveProductImage(ProductImage request)
         {
-            throw new NotImplementedException();
+            return _productRepository.SaveProductImage(request);
         }
     }
 }

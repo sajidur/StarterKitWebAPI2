@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="Migrations\202210251622068_initial_details.cs" />
     <Compile Include="Migrations\202210251622068_initial_details.designer.cs">
@@ -62,16 +63,23 @@
     <Compile Include="Migrations\202210261640311_product.designer.cs">
       <DependentUpon>202210261640311_product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210280834546_category.cs" />
+    <Compile Include="Migrations\202210280834546_category.designer.cs">
+      <DependentUpon>202210280834546_category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductImage.cs" />
+    <Compile Include="Repository\IUserRepository.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\INewsContentRepository.cs" />
     <Compile Include="Repository\IContactRepository.cs" />
     <Compile Include="Repository\NewsContentRepository.cs" />
     <Compile Include="Repository\ContactRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="SliderImage.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210261640311_product.resx">
       <DependentUpon>202210261640311_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210280834546_category.resx">
+      <DependentUpon>202210280834546_category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,23 +18,22 @@ namespace StartKitBLL
             // Specify the file to be attached and sent.
             // This example assumes that a file named Data.xls exists in the
             // current working directory.
-            string file = "data.xls";
             // Create a message and set up the recipients.
             MailMessage message = new MailMessage(
                 "sajidur@rexsystemsbd.com",
-                email.Email,
+                "info@dhakahandicrafts.com",
                 email.Subject,
-                email.Message);
-
+                "My email address is:"+  email.Email+" Message:" + email.Message);
+            message.ReplyToList.Add(new MailAddress(email.Email));
             // Create  the file attachment for this email message.
-          //  Attachment data = new Attachment(file, MediaTypeNames.Application.Octet);
+            //  Attachment data = new Attachment(file, MediaTypeNames.Application.Octet);
             // Add time stamp information for the file.
             //ContentDisposition disposition = data.ContentDisposition;
             //disposition.CreationDate = System.IO.File.GetCreationTime(file);
             //disposition.ModificationDate = System.IO.File.GetLastWriteTime(file);
             //disposition.ReadDate = System.IO.File.GetLastAccessTime(file);
             // Add the file attachment to this email message.
-           // message.Attachments.Add(data);
+            // message.Attachments.Add(data);
 
             //Send the message.
             SmtpClient client = new SmtpClient("mail.rexsystemsbd.com", 8889);
@@ -42,7 +41,6 @@ namespace StartKitBLL
             NetworkCredential MyCredentials = new NetworkCredential("sajidur@rexsystemsbd.com", "Bll01917813583*");
             // Add credentials if the SMTP server requires them.
             client.Credentials = MyCredentials;
-
             try
             {
                 client.Send(message);

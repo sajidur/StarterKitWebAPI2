@@ -8,5 +8,7 @@ namespace StartKitBLL
     {
         int Save(NewsContent newsContent);
         List<NewsContent> GetList(string type);
+        NewsContent GetById(int id);
+        int Delete(int id);
     }
 }

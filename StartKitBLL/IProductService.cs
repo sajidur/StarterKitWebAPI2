@@ -14,7 +14,7 @@ namespace StartKitBLL
         List<Product> GetAll(int categoryId);
         ProductResponse GetByProduct(int productId);
         List<ProductResponse> GetTopList(int categoryId);
-        bool Save(Product sliderImage);
-        bool SaveProductImage(ProductImage request);
+        int Save(Product sliderImage);
+        int SaveProductImage(ProductImage request);
     }
 }
