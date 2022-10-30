@@ -33,7 +33,16 @@ namespace StartKitBLL
             var products = _productRepository.GetAll(categoryId).ToList();
             foreach (var product in products)
             {
-                var productResponse = _mapper.Map<ProductResponse>(product);
+                var productResponse = new ProductResponse()
+                {
+                    CategoryId=product.CategoryId,
+                    DetailText=product.DetailText,
+                    InStockText=product.InStockText,
+                    Name=product.Name,
+                    Price=product.Price,
+                    ShortText=product.ShortText,
+                    TitleText=product.TitleText
+                };
                 productResponse.Images = _productRepository.GetProductImages(product.Id).ToList();
                 list.Add(productResponse);
             }

@@ -10,7 +10,7 @@ namespace StarterKITDAL
     {
         public bool IsDefault { get; set; }
         public int ProductId { get; set; }
-        public int ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public string ImageText { get; set; }
     }
 }
