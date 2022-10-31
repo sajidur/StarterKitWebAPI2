@@ -15,10 +15,12 @@ namespace StartKitBLL
    public  class ProductService : IProductService
     {
         private IProductRepository _productRepository;
+        private IUploadService _uploadService;
         private IMapper _mapper;
-        public ProductService(IProductRepository sliderImageRepository, IMapper mapper)
+        public ProductService(IProductRepository sliderImageRepository, IUploadService uploadService, IMapper mapper)
         {
             this._productRepository = sliderImageRepository;
+            _uploadService = uploadService;
             this._mapper = mapper;
         }
 
@@ -41,7 +43,9 @@ namespace StartKitBLL
                     Name=product.Name,
                     Price=product.Price,
                     ShortText=product.ShortText,
-                    TitleText=product.TitleText
+                    TitleText=product.TitleText,
+                    Id=product.Id
+
                 };
                 productResponse.Images = _productRepository.GetProductImages(product.Id).ToList();
                 list.Add(productResponse);
@@ -54,7 +58,18 @@ namespace StartKitBLL
             var product = _productRepository.GetByProduct(productId);
             if (product!=null)
             {
-               var productResponse= _mapper.Map<ProductResponse>(product);
+                var productResponse = new ProductResponse()
+                {
+                    CategoryId = product.CategoryId,
+                    DetailText = product.DetailText,
+                    InStockText = product.InStockText,
+                    Name = product.Name,
+                    Price = product.Price,
+                    ShortText = product.ShortText,
+                    TitleText = product.TitleText,
+                    Id = product.Id
+
+                };
                 productResponse.Images = _productRepository.GetProductImages(productId).ToList();
                 return productResponse;
             }
@@ -69,10 +84,27 @@ namespace StartKitBLL
         {
             return _productRepository.Save(product);
         }
-
         public int SaveProductImage(ProductImage request)
         {
             return _productRepository.SaveProductImage(request);
+        }
+
+        public bool DeleteProductImage(int productId)
+        {
+            var productImage = _productRepository.ProductImageDelete(productId);
+            _uploadService.DeleteImage(productImage.ImageUrl);
+            return true;
+        }
+
+        public bool ProductDelete(int Id)
+        {
+            _productRepository.Delete(Id);
+            var list = _productRepository.GetProductImages(Id);
+            foreach (var item in list)
+            {
+                _uploadService.DeleteImage(item.ImageUrl);
+            }
+            return true;
         }
     }
 }

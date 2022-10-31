@@ -330,3 +330,11 @@ C:\My data\StarterKitWebAPI2\WebAPIStartupKit\obj\Debug\WebAPIStartupKit.csproj.
 C:\My data\StarterKitWebAPI2\WebAPIStartupKit\obj\Debug\WebAPIStartupKit.dll
 C:\My data\StarterKitWebAPI2\WebAPIStartupKit\obj\Debug\WebAPIStartupKit.pdb
 C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\StartKitBLL.dll.config
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Memory.dll
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Buffers.dll
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Numerics.Vectors.dll
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Memory.xml
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Buffers.xml
+C:\My data\StarterKitWebAPI2\WebAPIStartupKit\bin\System.Numerics.Vectors.xml

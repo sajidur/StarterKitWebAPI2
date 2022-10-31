@@ -67,6 +67,10 @@
     <Compile Include="Migrations\202210280834546_category.designer.cs">
       <DependentUpon>202210280834546_category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210301209363_product image.cs" />
+    <Compile Include="Migrations\202210301209363_product image.designer.cs">
+      <DependentUpon>202210301209363_product image.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
     <Compile Include="Product.cs" />
@@ -97,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210280834546_category.resx">
       <DependentUpon>202210280834546_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210301209363_product image.resx">
+      <DependentUpon>202210301209363_product image.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

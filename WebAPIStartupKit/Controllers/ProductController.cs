@@ -53,17 +53,17 @@ namespace WebAPIStartupKit.Controllers
 
         [HttpPost]
         [Route("ProductDelete")]
-        public bool ProductDelete(ProductImage request)
+        public bool ProductDelete(int Id)
         {
-            var i = _productService.SaveProductImage(request);
+            var i = _productService.ProductDelete(Id);
             return true;
         }
 
         [HttpPost]
         [Route("ProductImageDelete")]
-        public bool ProductImageDelete(ProductImage request)
+        public bool ProductImageDelete(int Id)
         {
-            var i = _productService.SaveProductImage(request);
+            var i = _productService.DeleteProductImage(Id);
             return true;
         }
 

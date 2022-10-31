@@ -25,6 +25,7 @@ namespace WebAPIStartupKit
             container.RegisterType<INewsContentService, NewsContentService>();
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<ICategoryService, CategoryService>();
+            container.RegisterType<IUploadService, UploadService>();
 
             //  container.RegisterType<ISalaryItemService, SalaryItemService>();
             container.RegisterType<IProductRepository, ProductRepository>();

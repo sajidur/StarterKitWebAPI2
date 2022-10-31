@@ -79,3 +79,5 @@ C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\System.Buffers.xml
 C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\System.IO.Pipelines.xml
 C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\System.Memory.xml
 C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\System.Numerics.Vectors.xml
+C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\My data\StarterKitWebAPI2\StartKitBLL\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml

@@ -15,6 +15,8 @@ namespace StartKitBLL
         ProductResponse GetByProduct(int productId);
         List<ProductResponse> GetTopList(int categoryId);
         int Save(Product sliderImage);
+        bool DeleteProductImage(int productId);
+        bool ProductDelete(int Id);
         int SaveProductImage(ProductImage request);
     }
 }
