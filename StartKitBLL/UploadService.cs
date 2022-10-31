@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Hosting;
 
 namespace StartKitBLL
 {
@@ -19,7 +20,7 @@ namespace StartKitBLL
         {
             try
             {
-                string sPath = "~/Upload/"+fileName; // Doesn't hit this breakpoint
+                string sPath =HostingEnvironment.MapPath("~/Upload/")+fileName; // Doesn't hit this breakpoint
 
                 if (File.Exists(sPath))
                 {
