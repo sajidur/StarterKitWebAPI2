@@ -18,20 +18,19 @@ namespace StartKitBLL
         }
         public void DeleteImage(string fileName)
         {
+            string sPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Upload"); // Doesn't hit this breakpoint
             try
             {
-                string sPath =HostingEnvironment.MapPath("~/Upload/")+fileName; // Doesn't hit this breakpoint
-
+                SimpleLogger.Log(DateTime.Now+"Deleting file|"+sPath+ "|fileName"+ fileName);
                 if (File.Exists(sPath))
                 {
-                    File.Delete(sPath + "/" + fileName);
+                    File.Delete(sPath + @"\" + fileName);
                 }
-
 
             }
             catch (Exception ex)
             {
-
+                SimpleLogger.Log(DateTime.Now + "Deleting file error|" + sPath + "|fileName" + fileName);
             }
         }
 

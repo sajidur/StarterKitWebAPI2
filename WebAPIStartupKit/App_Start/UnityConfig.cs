@@ -26,6 +26,8 @@ namespace WebAPIStartupKit
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<ICategoryService, CategoryService>();
             container.RegisterType<IUploadService, UploadService>();
+            container.RegisterType<IImageConfigService, ImageConfigService>();
+            container.RegisterType<IPageContentService, PageContentService>();
 
             //  container.RegisterType<ISalaryItemService, SalaryItemService>();
             container.RegisterType<IProductRepository, ProductRepository>();
@@ -33,6 +35,8 @@ namespace WebAPIStartupKit
             container.RegisterInstance<IMapper>(UserProfile.Mapper);
             container.RegisterType<IUserRepository, UserRepository>();
             container.RegisterType<ICategoryRepository, CategoryRepository>();
+            container.RegisterType<IPageContentRepository, PageContentRepository>();
+            container.RegisterType<IImageConfigRepository, ImageConfigRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

@@ -39,3 +39,4 @@ C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.Genera
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.product.resources
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.category.resources
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.productimage.resources
+C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.addpagecontent.resources

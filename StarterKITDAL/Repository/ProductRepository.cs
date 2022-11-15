@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,10 @@ namespace StarterKITDAL.Repository
         {
             return _context.Products.Where(a => a.Id == productId).FirstOrDefault();
         }
+        public List<Product> Search(string search)
+        {
+            return _context.Products.Where(a => a.Name.Contains(search)||a.ShortText.Contains(search)).ToList();
+        }
 
         public ICollection<ProductImage> GetProductImages(int productId)
         {
@@ -31,7 +36,15 @@ namespace StarterKITDAL.Repository
 
         public int Save(Product sliderImage)
         {
-            _context.Products.Add(sliderImage);
+            if (sliderImage.Id>0)
+            {
+                _context.Products.Attach(sliderImage);
+                _context.Entry(sliderImage).State = EntityState.Modified;
+            }
+            else
+            {
+                _context.Products.Add(sliderImage);
+            }
             _context.SaveChanges();
             return sliderImage.Id;   
         }

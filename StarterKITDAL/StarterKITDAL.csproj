@@ -55,6 +55,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="ImageConfiguration.cs" />
     <Compile Include="Migrations\202210251622068_initial_details.cs" />
     <Compile Include="Migrations\202210251622068_initial_details.designer.cs">
       <DependentUpon>202210251622068_initial_details.cs</DependentUpon>
@@ -71,12 +72,19 @@
     <Compile Include="Migrations\202210301209363_product image.designer.cs">
       <DependentUpon>202210301209363_product image.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202211051345441_add page content.cs" />
+    <Compile Include="Migrations\202211051345441_add page content.designer.cs">
+      <DependentUpon>202211051345441_add page content.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NewsContent.cs" />
+    <Compile Include="PageContent.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductImage.cs" />
     <Compile Include="Repository\IUserRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\PageContentRepository.cs" />
+    <Compile Include="Repository\ImageConfigRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\INewsContentRepository.cs" />
@@ -104,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210301209363_product image.resx">
       <DependentUpon>202210301209363_product image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211051345441_add page content.resx">
+      <DependentUpon>202211051345441_add page content.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

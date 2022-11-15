@@ -28,13 +28,20 @@ namespace WebAPIStartupKit.Controllers
         {
             return _productService.GetTopList(categoryId);
         }
-        
+        [HttpGet]
+        [Route("Search")]
+        public List<ProductResponse> Search(string search)
+        {
+            return _productService.Search(search);
+        }
+
         [HttpGet]
         [Route("GetByProductId")]
         public ProductResponse GetByProductId(int productId)
         {
             return _productService.GetByProduct(productId);
         }
+
         [HttpPost]
         [Route("Save")]
         public int Save(Product request)

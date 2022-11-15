@@ -29,6 +29,30 @@ namespace StartKitBLL
             var salaryItems = _productRepository.GetAll(categoryId).ToList();
             return salaryItems;
         }
+        public List<ProductResponse> Search(string search)
+        {
+            List<ProductResponse> list = new List<ProductResponse>();
+
+            var products = _productRepository.Search(search);
+            foreach (var product in products)
+            {
+                var productResponse = new ProductResponse()
+                {
+                    CategoryId = product.CategoryId,
+                    DetailText = product.DetailText,
+                    InStockText = product.InStockText,
+                    Name = product.Name,
+                    Price = product.Price,
+                    ShortText = product.ShortText,
+                    TitleText = product.TitleText,
+                    Id = product.Id
+
+                };
+                productResponse.Images = _productRepository.GetProductImages(product.Id).ToList();
+                list.Add(productResponse);
+            }
+            return list;
+        }
         public List<ProductResponse> GetTopList(int categoryId)
         {
             List<ProductResponse> list = new List<ProductResponse>();

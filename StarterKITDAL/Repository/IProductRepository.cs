@@ -16,6 +16,6 @@ namespace StarterKITDAL.Repository
         ProductImage ProductImageDelete(int id);
         List<ProductImage> ProductImageDeleteByProductId(int productId);
         int SaveProductImage(ProductImage sliderImage);
-
+        List<Product> Search(string search);
     }
 }

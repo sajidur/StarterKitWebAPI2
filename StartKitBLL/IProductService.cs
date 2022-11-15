@@ -18,5 +18,6 @@ namespace StartKitBLL
         bool DeleteProductImage(int productId);
         bool ProductDelete(int Id);
         int SaveProductImage(ProductImage request);
+        List<ProductResponse> Search(string search);
     }
 }

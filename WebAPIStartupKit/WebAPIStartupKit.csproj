@@ -218,6 +218,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="AutoMapperHelper.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ImageConfigController.cs" />
+    <Compile Include="Controllers\PageContentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

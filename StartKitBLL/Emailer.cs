@@ -21,7 +21,7 @@ namespace StartKitBLL
             // Create a message and set up the recipients.
             MailMessage message = new MailMessage(
                 "sajidur@rexsystemsbd.com",
-                "info@dhakahandicrafts.com",
+                "suahmed@dhakahandicrafts.com",
                 email.Subject,
                 "My email address is:"+  email.Email+" Message:" + email.Message);
             message.ReplyToList.Add(new MailAddress(email.Email));
