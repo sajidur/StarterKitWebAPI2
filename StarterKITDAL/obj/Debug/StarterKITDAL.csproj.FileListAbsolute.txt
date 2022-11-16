@@ -40,3 +40,21 @@ C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.pr
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.category.resources
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.productimage.resources
 C:\My data\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.addpagecontent.resources
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.dll.config
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.dll
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\StarterKITDAL.pdb
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.dll
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.xml
+E:\StarterKitWebAPI2\StarterKITDAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.AssemblyReference.cache
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.initial_details.resources
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.product.resources
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.category.resources
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.productimage.resources
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.Migrations.addpagecontent.resources
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.GenerateResource.cache
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CoreCompileInputs.cache
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.csproj.CopyComplete
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.dll
+E:\StarterKitWebAPI2\StarterKITDAL\obj\Debug\StarterKITDAL.pdb

@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace WebAPIStartupKit.Controllers
 {
+    [RoutePrefix("api/PageContent")]
     public class PageContentController : ApiController
     {
         // GET: SalaryItem
