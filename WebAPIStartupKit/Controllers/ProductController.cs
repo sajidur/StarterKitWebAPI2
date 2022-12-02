@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace WebAPIStartupKit.Controllers
 {
+    [RoutePrefix("api/Product")]
     public class ProductController : ApiController
     {
         private readonly IProductService _productService;

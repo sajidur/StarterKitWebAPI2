@@ -20,8 +20,9 @@ namespace StartKitBLL
             // current working directory.
             // Create a message and set up the recipients.
             MailMessage message = new MailMessage(
-                "sajidur@rexsystemsbd.com",
-                "suahmed@dhakahandicrafts.com",
+                "web@dhakahandicrafts.com",
+               // "suahmed@dhakahandicrafts.com,website@dhakahandicrafts.com,sajid.ict@hotmail.com",
+               "website@dhakahandicrafts.com,sajid.ict@hotmail.com",
                 email.Subject,
                 "My email address is:"+  email.Email+" Message:" + email.Message);
             message.ReplyToList.Add(new MailAddress(email.Email));
@@ -36,9 +37,10 @@ namespace StartKitBLL
             // message.Attachments.Add(data);
 
             //Send the message.
-            SmtpClient client = new SmtpClient("mail.rexsystemsbd.com", 8889);
+            //  SmtpClient client = new SmtpClient("mail.rexsystemsbd.com", 8889);
+            SmtpClient client = new SmtpClient("mail.dhakahandicrafts.com", 587);
             client.UseDefaultCredentials = false;
-            NetworkCredential MyCredentials = new NetworkCredential("sajidur@rexsystemsbd.com", "Bll01917813583*");
+            NetworkCredential MyCredentials = new NetworkCredential("web@dhakahandicrafts.com", "Root@pass1");
             // Add credentials if the SMTP server requires them.
             client.Credentials = MyCredentials;
             try

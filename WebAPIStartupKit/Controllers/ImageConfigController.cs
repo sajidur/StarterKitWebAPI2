@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace WebAPIStartupKit.Controllers
 {
+    [RoutePrefix("api/ImageConfig")]
     public class ImageConfigController : ApiController
     {
         // GET: SalaryItem
