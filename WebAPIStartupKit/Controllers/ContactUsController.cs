@@ -15,7 +15,7 @@ namespace WebAPIStartupKit.Controllers
         }
 
         [HttpPost]
-        public async Task<bool> Contact(Contact contact)
+        public async Task<string> Contact(Contact contact)
         {
             return await Task.Run(() => _emailer.SendEmail(contact));
         }
