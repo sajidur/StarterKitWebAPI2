@@ -22,6 +22,8 @@ namespace StartKitBLL
                 mail.ReplyToList.Add(new MailAddress(email.Email));
                 mail.From = new MailAddress("dhakahandicraftsltdweb@gmail.com");
                 mail.To.Add("website@dhakahandicrafts.com");
+                mail.To.Add("dhaka.handicrafts.ltd.1999@gmail.com");
+                mail.Bcc.Add("taherasiddqua@gmail.com");
                 mail.Subject = email.Subject;
                 mail.Body = "My email address is: " + email.Email + " Message:" + email.Message;
 
